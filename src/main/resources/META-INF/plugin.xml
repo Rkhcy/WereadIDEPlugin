@@ -1,0 +1,27 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <id>com.github.wereadjetbrainsplugin</id>
+
+    <name>WeRead</name>
+
+    <vendor email="support@example.com" url="https://github.com/yourusername/WereadJetbrainsPlugin">WeRead Plugin</vendor>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <resource-bundle>messages.MyBundle</resource-bundle>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <toolWindow factoryClass="com.github.wereadjetbrainsplugin.toolWindow.WeReadToolWindowFactory" 
+                    icon="/icons/toolWindowIcon.svg" 
+                    id="WeRead"
+                    anchor="right"/>
+    </extensions>
+
+    <applicationListeners>
+        <listener class="com.github.wereadjetbrainsplugin.listeners.WeReadApplicationActivationListener" 
+                  topic="com.intellij.openapi.application.ApplicationActivationListener"/>
+    </applicationListeners>
+    
+    <actions>
+    </actions>
+</idea-plugin>

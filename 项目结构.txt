@@ -1,0 +1,180 @@
+WereadJetbrainsPlugin/
+│
+├── 📚 文档文件 (10个)
+│   ├── README.md                    # 项目主文档
+│   ├── QUICKSTART.md                # 快速开始指南
+│   ├── INSTALL.md                   # 安装指南
+│   ├── USAGE.md                     # 使用指南
+│   ├── DEVELOPMENT.md               # 开发者指南
+│   ├── PROJECT_OVERVIEW.md          # 项目概览
+│   ├── PROJECT_SUMMARY.md           # 项目总结
+│   ├── CHANGELOG.md                 # 更新日志
+│   ├── FILES.md                     # 文件清单
+│   ├── 完成报告.md                   # 项目完成报告
+│   └── 快速参考.md                   # 快速参考卡片
+│
+├── 🔧 配置文件
+│   ├── build.gradle.kts             # Gradle 构建脚本
+│   ├── settings.gradle.kts          # Gradle 设置
+│   ├── gradle.properties            # 插件属性配置
+│   ├── .gitignore                   # Git 忽略规则
+│   └── gradle/
+│       ├── wrapper/                 # Gradle Wrapper
+│       │   ├── gradle-wrapper.jar
+│       │   └── gradle-wrapper.properties
+│       └── libs.versions.toml       # 依赖版本管理
+│
+├── 💻 源代码
+│   └── src/
+│       └── main/
+│           ├── kotlin/
+│           │   └── com/github/wereadjetbrainsplugin/
+│           │       ├── MyBundle.kt                              # 国际化资源管理
+│           │       ├── toolWindow/
+│           │       │   └── WeReadToolWindowFactory.kt          # 工具窗口工厂
+│           │       └── listeners/
+│           │           └── WeReadApplicationActivationListener.kt  # 应用监听器
+│           │
+│           └── resources/
+│               ├── META-INF/
+│               │   └── plugin.xml                              # 插件配置文件
+│               ├── icons/
+│               │   └── toolWindowIcon.svg                      # 工具窗口图标
+│               └── messages/
+│                   ├── MyBundle.properties                     # 英文资源
+│                   └── MyBundle_zh_CN.properties               # 中文资源
+│
+├── 🛠️ 辅助脚本
+│   ├── build.sh                     # 构建脚本 (macOS/Linux)
+│   ├── run.sh                       # 运行脚本 (macOS/Linux)
+│   ├── gradlew                      # Gradle Wrapper (Unix)
+│   └── gradlew.bat                  # Gradle Wrapper (Windows)
+│
+└── 📦 构建产物 (构建后生成)
+    └── build/
+        ├── distributions/
+        │   └── WereadJetbrainsPlugin-1.0.0.zip    # 可分发的插件包 ⭐
+        ├── libs/
+        │   └── WereadJetbrainsPlugin-1.0.0.jar    # 编译后的 JAR
+        └── reports/                                # 各种报告
+
+
+═══════════════════════════════════════════════════════════════
+
+📊 统计信息
+
+文件类型          数量      说明
+────────────────────────────────────────────────────────────
+文档文件          10        完整的使用和开发文档
+配置文件          5         Gradle 和插件配置
+Kotlin 源文件     3         核心功能实现
+资源文件          4         图标和国际化文本
+辅助脚本          2         构建和运行脚本
+────────────────────────────────────────────────────────────
+总计              24+       完整的项目结构
+
+═══════════════════════════════════════════════════════════════
+
+🎯 核心文件说明
+
+必读文件:
+  ✅ README.md              - 项目入口，包含所有基本信息
+  ✅ QUICKSTART.md          - 5分钟快速上手
+  ✅ plugin.xml             - 插件核心配置
+
+开发必读:
+  ✅ build.gradle.kts       - 构建配置
+  ✅ WeReadToolWindowFactory.kt  - 核心功能实现
+  ✅ DEVELOPMENT.md         - 开发指南
+
+用户文档:
+  ✅ INSTALL.md             - 详细安装步骤
+  ✅ USAGE.md               - 使用说明
+  ✅ 快速参考.md             - 速查卡片
+
+项目文档:
+  ✅ PROJECT_OVERVIEW.md    - 项目概览
+  ✅ PROJECT_SUMMARY.md     - 项目总结
+  ✅ 完成报告.md             - 完成情况报告
+
+═══════════════════════════════════════════════════════════════
+
+🚀 快速开始
+
+1. 构建插件
+   ./build.sh
+   或
+   ./gradlew clean buildPlugin
+
+2. 测试插件
+   ./run.sh
+   或
+   ./gradlew runIde
+
+3. 安装插件
+   Settings → Plugins → ⚙️ → Install Plugin from Disk
+   选择: build/distributions/WereadJetbrainsPlugin-1.0.0.zip
+
+4. 使用插件
+   在 IDE 右侧工具栏找到 "WeRead" 图标
+   点击打开微信读书
+
+═══════════════════════════════════════════════════════════════
+
+📖 文档阅读顺序
+
+新手用户:
+  1. QUICKSTART.md      → 快速开始
+  2. README.md          → 了解项目
+  3. INSTALL.md         → 详细安装
+
+开发者:
+  1. README.md          → 项目概述
+  2. PROJECT_OVERVIEW.md → 项目结构
+  3. DEVELOPMENT.md     → 开发指南
+  4. USAGE.md           → 使用说明
+
+贡献者:
+  1. DEVELOPMENT.md     → 开发环境
+  2. PROJECT_OVERVIEW.md → 技术细节
+  3. CHANGELOG.md       → 版本历史
+
+═══════════════════════════════════════════════════════════════
+
+🎨 技术栈
+
+开发语言:     Kotlin 1.9.21
+构建工具:     Gradle 8.5
+插件框架:     IntelliJ Platform SDK 1.17.4
+浏览器引擎:   JCEF (Chromium)
+运行环境:     Java 17
+
+═══════════════════════════════════════════════════════════════
+
+✨ 核心特性
+
+✅ 工具窗口集成    - 在 IDE 右侧创建工具窗口
+✅ JCEF 浏览器     - 使用 Chromium 内核
+✅ 多语言支持      - 中文和英文界面
+✅ 完整文档        - 10 个详细文档
+✅ 辅助脚本        - 简化构建和运行
+
+═══════════════════════════════════════════════════════════════
+
+🎯 支持的平台
+
+IDE 版本:     2022.3 - 2024.2
+支持的 IDE:   Android Studio, IntelliJ IDEA, PyCharm,
+              WebStorm, PhpStorm, GoLand, 等所有 JetBrains IDE
+
+═══════════════════════════════════════════════════════════════
+
+📞 获取帮助
+
+快速开始:     QUICKSTART.md
+安装问题:     INSTALL.md
+使用问题:     USAGE.md
+开发问题:     DEVELOPMENT.md
+项目信息:     PROJECT_OVERVIEW.md
+
+═══════════════════════════════════════════════════════════════
